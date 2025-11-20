@@ -1,0 +1,4 @@
+project_id = "ipsftfkerbchtvrwasub"
+
+[functions.job-chat]
+verify_jwt = false

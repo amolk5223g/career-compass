@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { JobChatBot } from "@/components/JobChatBot";
 import { 
   Users, 
   MapPin, 
@@ -22,6 +23,9 @@ import {
 
 const UserDashboard = () => {
   const [activeTab, setActiveTab] = useState("jobs");
+  
+  // User skills for chatbot context
+  const userSkills = ["Frontend Development", "React", "TypeScript", "UI/UX Design"];
 
   const jobs = [
     {
@@ -219,6 +223,9 @@ const UserDashboard = () => {
           </TabsContent>
         </Tabs>
       </div>
+
+      {/* AI Job Chatbot */}
+      <JobChatBot userSkills={userSkills} />
     </div>
   );
 };
